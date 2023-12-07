@@ -1,20 +1,6 @@
-const express = require('express');
-const db = require('./db-config');
+require('dotenv').config();
 
-const app = express();
-app.use(express.json());
+const server = require('./api/server.js');
 
-// Example endpoint
-app.get('/', async (req, res) => {
-  try {
-    const data = await db('resource').select('*');
-    res.json(data);
-  } catch (error) {
-    res.status(500).json({ error: 'Internal Server Error' });
-  }
-});
-
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
-});
+const port = process.env.PORT || 9000;
+server.listen(port, () => console.log(`\n** server up on port ${port} **\n`));

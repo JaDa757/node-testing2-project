@@ -1,10 +1,9 @@
-/**
+/*
  * For a detailed explanation regarding each configuration property, visit:
  * https://jestjs.io/docs/configuration
  */
 
-/** @type {import('jest').Config} */
-const config = {
+module.exports = {
   // All imported modules in your tests should be mocked automatically
   // automock: false,
 
@@ -12,7 +11,7 @@ const config = {
   // bail: 0,
 
   // The directory where Jest should store its cached dependency information
-  // cacheDirectory: "C:\\Users\\josha\\AppData\\Local\\Temp\\jest",
+  // cacheDirectory: "/private/var/folders/96/mtz831_d14j85kmn9jcn1mc40000gn/T/jest_dx",
 
   // Automatically clear mock calls, instances, contexts and results before every test
   // clearMocks: false,
@@ -28,7 +27,7 @@ const config = {
 
   // An array of regexp pattern strings used to skip coverage collection
   // coveragePathIgnorePatterns: [
-  //   "\\\\node_modules\\\\"
+  //   "/node_modules/"
   // ],
 
   // Indicates which provider should be used to instrument code for coverage
@@ -161,7 +160,7 @@ const config = {
 
   // An array of regexp pattern strings that are matched against all test paths, matched tests are skipped
   // testPathIgnorePatterns: [
-  //   "\\\\node_modules\\\\"
+  //   "/node_modules/"
   // ],
 
   // The regexp pattern or array of patterns that Jest uses to detect test files
@@ -178,8 +177,8 @@ const config = {
 
   // An array of regexp pattern strings that are matched against all source file paths, matched files will skip transformation
   // transformIgnorePatterns: [
-  //   "\\\\node_modules\\\\",
-  //   "\\.pnp\\.[^\\\\]+$"
+  //   "/node_modules/",
+  //   "\\.pnp\\.[^\\/]+$"
   // ],
 
   // An array of regexp pattern strings that are matched against all modules before the module loader will automatically return a mock for them
@@ -194,5 +193,3 @@ const config = {
   // Whether to use watchman for file crawling
   // watchman: true,
 };
-
-module.exports = config;
