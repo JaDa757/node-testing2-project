@@ -46,6 +46,7 @@ server.delete('/resources/:id', async (req, res) => {
 });
 
 
+
 server.put('/resources/:id', async (req, res) => {
   const updatedResource = await Resource.update(req.params.id, req.body);
   if (updatedResource) {
